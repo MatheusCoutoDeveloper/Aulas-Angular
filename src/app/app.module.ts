@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -10,8 +11,14 @@ import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas
 import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
 
 @NgModule({
-  declarations: [AppComponent, TitleComponent, DataBidingComponent, DiretivasEstruturaisComponent, DiretivasAtributosComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    TitleComponent,
+    DataBidingComponent,
+    DiretivasEstruturaisComponent,
+    DiretivasAtributosComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })
