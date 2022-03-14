@@ -25,4 +25,22 @@ export class FoodlistComponent implements OnInit {
       return this.foodList.push(res);
     });
   }
+
+  public foodListDelete(id: number) {
+    return this.foodListService.foodListDelete(id).subscribe(
+      (res) => {
+        this.foodList = this.foodList.filter((item) => {
+          return id !== item.id;
+        });
+      },
+      (error) => error
+    );
+  }
+
+  public foodListEdit(value: string, id: number) {
+    this.foodListService.foodListEdit(value, id).subscribe(
+      (res) => alert('Editado com sucesso!'),
+      (error) => error
+    );
+  }
 }
