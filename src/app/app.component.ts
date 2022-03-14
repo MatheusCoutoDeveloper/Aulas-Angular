@@ -23,7 +23,6 @@ import { Component } from '@angular/core';
     <app-input [contador]="addValue"></app-input>
     <br />
     <button (click)="Add()">Add</button>
-    -->
 
     <ng-template [ngIf]="getDados">
       <h1>{{ getDados.nome }}</h1>
@@ -31,6 +30,10 @@ import { Component } from '@angular/core';
     </ng-template>
 
     <app-output (enviarDados)="setDados($event)"></app-output>
+    -->
+    <app-food-add></app-food-add>
+    <app-foodlist></app-foodlist>
+
     <router-outlet></router-outlet>
   `,
 })
